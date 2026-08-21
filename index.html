@@ -126,20 +126,25 @@
         }
     </style>
     <script>
-  (function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const enquirylistid = urlParams.get('enquirylistid');
+document.addEventListener("DOMContentLoaded", function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const enquirylistid = urlParams.get('enquirylistid');
 
-    // Map specific ID values to their target HTML pages
-    const pageMap = {
-      '70': 'about.html',
-      '60': 'contact.html'
-    };
+  // Map specific ID values to their target HTML pages
+  const pageMap = {
+    '44': 'enquiry-44.html',
+    '55': 'enquiry-55.html',
+    '60': 'contact.html',
+    '70': 'about.html'
+  };
 
-    if (enquirylistid) {
-        document.getElementById("myLabel").textContent = pageMap[enquirylistid];
-          }
-  })();
+  const labelElement = document.getElementById("myLabel");
+
+  if (labelElement && enquirylistid && pageMap[enquirylistid]) {
+    labelElement.textContent = pageMap[enquirylistid];
+  }
+});
+
 </script>
 </head>
 <body>
