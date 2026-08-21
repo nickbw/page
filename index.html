@@ -128,7 +128,7 @@
     <script>
   (function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
+    const enquirylistid = urlParams.get('enquirylistid');
 
     // Map specific ID values to their target HTML pages
     const pageMap = {
@@ -136,8 +136,8 @@
       '55': 'contact.html'
     };
 
-    if (id && pageMap[id]) {
-      window.location.href = pageMap[id];
+    if (enquirylistid && pageMap[enquirylistid]) {
+      window.location.href = pageMap[enquirylistid];
     }
   })();
 </script>
